@@ -4720,6 +4720,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
+      },
+      "CuidaTuAbuelo.DataAccess/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "compile": {
+          "bin/placeholder/CuidaTuAbuelo.DataAccess.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CuidaTuAbuelo.DataAccess.dll": {}
+        }
       }
     }
   },
@@ -12929,10 +12939,16 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
+    },
+    "CuidaTuAbuelo.DataAccess/1.0.0": {
+      "type": "project",
+      "path": "../CuidaTuAbuelo.DataAccess/CuidaTuAbuelo.DataAccess.csproj",
+      "msbuildProject": "../CuidaTuAbuelo.DataAccess/CuidaTuAbuelo.DataAccess.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
+      "CuidaTuAbuelo.DataAccess >= 1.0.0",
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
       "Microsoft.NETCore.App >= 2.2.0",
@@ -12968,7 +12984,11 @@
       },
       "frameworks": {
         "netcoreapp2.2": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Desarrollo\\Hackatrix\\back\\CuidaTuAbuelo\\CuidaTuAbuelo.DataAccess\\CuidaTuAbuelo.DataAccess.csproj": {
+              "projectPath": "C:\\Desarrollo\\Hackatrix\\back\\CuidaTuAbuelo\\CuidaTuAbuelo.DataAccess\\CuidaTuAbuelo.DataAccess.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

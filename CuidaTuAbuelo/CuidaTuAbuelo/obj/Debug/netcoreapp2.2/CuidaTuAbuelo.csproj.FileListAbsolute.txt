@@ -12,3 +12,6 @@ C:\Desarrollo\Hackatrix\back\CuidaTuAbuelo\CuidaTuAbuelo\obj\Debug\netcoreapp2.2
 C:\Desarrollo\Hackatrix\back\CuidaTuAbuelo\CuidaTuAbuelo\obj\Debug\netcoreapp2.2\CuidaTuAbuelo.RazorTargetAssemblyInfo.cache
 C:\Desarrollo\Hackatrix\back\CuidaTuAbuelo\CuidaTuAbuelo\obj\Debug\netcoreapp2.2\CuidaTuAbuelo.dll
 C:\Desarrollo\Hackatrix\back\CuidaTuAbuelo\CuidaTuAbuelo\obj\Debug\netcoreapp2.2\CuidaTuAbuelo.pdb
+C:\Desarrollo\Hackatrix\back\CuidaTuAbuelo\CuidaTuAbuelo\bin\Debug\netcoreapp2.2\CuidaTuAbuelo.DataAccess.dll
+C:\Desarrollo\Hackatrix\back\CuidaTuAbuelo\CuidaTuAbuelo\bin\Debug\netcoreapp2.2\CuidaTuAbuelo.DataAccess.pdb
+C:\Desarrollo\Hackatrix\back\CuidaTuAbuelo\CuidaTuAbuelo\obj\Debug\netcoreapp2.2\CuidaTuAbuelo.csproj.CopyComplete

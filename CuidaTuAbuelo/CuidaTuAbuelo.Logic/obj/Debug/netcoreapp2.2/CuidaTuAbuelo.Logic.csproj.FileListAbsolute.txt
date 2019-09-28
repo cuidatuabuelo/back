@@ -1,0 +1,9 @@
+C:\Desarrollo\Hackatrix\back\CuidaTuAbuelo\CuidaTuAbuelo.Logic\bin\Debug\netcoreapp2.2\CuidaTuAbuelo.Logic.deps.json
+C:\Desarrollo\Hackatrix\back\CuidaTuAbuelo\CuidaTuAbuelo.Logic\bin\Debug\netcoreapp2.2\CuidaTuAbuelo.Logic.dll
+C:\Desarrollo\Hackatrix\back\CuidaTuAbuelo\CuidaTuAbuelo.Logic\bin\Debug\netcoreapp2.2\CuidaTuAbuelo.Logic.pdb
+C:\Desarrollo\Hackatrix\back\CuidaTuAbuelo\CuidaTuAbuelo.Logic\obj\Debug\netcoreapp2.2\CuidaTuAbuelo.Logic.csprojAssemblyReference.cache
+C:\Desarrollo\Hackatrix\back\CuidaTuAbuelo\CuidaTuAbuelo.Logic\obj\Debug\netcoreapp2.2\CuidaTuAbuelo.Logic.csproj.CoreCompileInputs.cache
+C:\Desarrollo\Hackatrix\back\CuidaTuAbuelo\CuidaTuAbuelo.Logic\obj\Debug\netcoreapp2.2\CuidaTuAbuelo.Logic.AssemblyInfoInputs.cache
+C:\Desarrollo\Hackatrix\back\CuidaTuAbuelo\CuidaTuAbuelo.Logic\obj\Debug\netcoreapp2.2\CuidaTuAbuelo.Logic.AssemblyInfo.cs
+C:\Desarrollo\Hackatrix\back\CuidaTuAbuelo\CuidaTuAbuelo.Logic\obj\Debug\netcoreapp2.2\CuidaTuAbuelo.Logic.dll
+C:\Desarrollo\Hackatrix\back\CuidaTuAbuelo\CuidaTuAbuelo.Logic\obj\Debug\netcoreapp2.2\CuidaTuAbuelo.Logic.pdb

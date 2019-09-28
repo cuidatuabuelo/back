@@ -1,0 +1,9 @@
+C:\Desarrollo\Hackatrix\back\CuidaTuAbuelo\CuidaTuAbuelo.DataAccess\obj\Debug\netcoreapp2.2\CuidaTuAbuelo.DataAccess.csproj.CoreCompileInputs.cache
+C:\Desarrollo\Hackatrix\back\CuidaTuAbuelo\CuidaTuAbuelo.DataAccess\obj\Debug\netcoreapp2.2\CuidaTuAbuelo.DataAccess.AssemblyInfoInputs.cache
+C:\Desarrollo\Hackatrix\back\CuidaTuAbuelo\CuidaTuAbuelo.DataAccess\obj\Debug\netcoreapp2.2\CuidaTuAbuelo.DataAccess.AssemblyInfo.cs
+C:\Desarrollo\Hackatrix\back\CuidaTuAbuelo\CuidaTuAbuelo.DataAccess\bin\Debug\netcoreapp2.2\CuidaTuAbuelo.DataAccess.deps.json
+C:\Desarrollo\Hackatrix\back\CuidaTuAbuelo\CuidaTuAbuelo.DataAccess\bin\Debug\netcoreapp2.2\CuidaTuAbuelo.DataAccess.dll
+C:\Desarrollo\Hackatrix\back\CuidaTuAbuelo\CuidaTuAbuelo.DataAccess\bin\Debug\netcoreapp2.2\CuidaTuAbuelo.DataAccess.pdb
+C:\Desarrollo\Hackatrix\back\CuidaTuAbuelo\CuidaTuAbuelo.DataAccess\obj\Debug\netcoreapp2.2\CuidaTuAbuelo.DataAccess.dll
+C:\Desarrollo\Hackatrix\back\CuidaTuAbuelo\CuidaTuAbuelo.DataAccess\obj\Debug\netcoreapp2.2\CuidaTuAbuelo.DataAccess.pdb
+C:\Desarrollo\Hackatrix\back\CuidaTuAbuelo\CuidaTuAbuelo.DataAccess\obj\Debug\netcoreapp2.2\CuidaTuAbuelo.DataAccess.csprojAssemblyReference.cache

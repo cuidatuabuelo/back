@@ -7,6 +7,6 @@ namespace CuidaTuAbuelo.DataAccess
     public class Base
     {
         public DateTime? createdDate { get; set; }
-        public int? userCreatorId { get; set; s }
+        public int? userCreatorId { get; set;  }
     }
 }

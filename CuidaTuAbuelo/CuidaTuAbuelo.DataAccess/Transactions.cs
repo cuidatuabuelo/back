@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace CuidaTuAbuelo.DataAccess
 {
     public class Transactions : Base
     {
+        [Key]
         public int transactionId { get; set; }
         public int userId { get; set; }
         public int productId { get; set; }

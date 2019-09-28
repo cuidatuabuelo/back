@@ -12,46 +12,46 @@ namespace CuidaTuAbuelo.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class UsersController : ControllerBase
+    public class StoriesController : ControllerBase
     {
         private readonly CuidaTuAbueloContext _context;
 
-        public UsersController(CuidaTuAbueloContext context)
+        public StoriesController(CuidaTuAbueloContext context)
         {
             _context = context;
         }
 
-        // GET: api/Users
+        // GET: api/Stories
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Users>>> GetUsers()
+        public async Task<ActionResult<IEnumerable<Stories>>> GetStories()
         {
-            return await _context.Users.ToListAsync();
+            return await _context.Stories.ToListAsync();
         }
 
-        // GET: api/Users/5
+        // GET: api/Stories/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Users>> GetUsers(int id)
+        public async Task<ActionResult<Stories>> GetStories(int id)
         {
-            var users = await _context.Users.FindAsync(id);
+            var stories = await _context.Stories.FindAsync(id);
 
-            if (users == null)
+            if (stories == null)
             {
                 return NotFound();
             }
 
-            return users;
+            return stories;
         }
 
-        // PUT: api/Users/5
+        // PUT: api/Stories/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutUsers(int id, Users users)
+        public async Task<IActionResult> PutStories(int id, Stories stories)
         {
-            if (id != users.userId)
+            if (id != stories.storyId)
             {
                 return BadRequest();
             }
 
-            _context.Entry(users).State = EntityState.Modified;
+            _context.Entry(stories).State = EntityState.Modified;
 
             try
             {
@@ -59,7 +59,7 @@ namespace CuidaTuAbuelo.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!UsersExists(id))
+                if (!StoriesExists(id))
                 {
                     return NotFound();
                 }
@@ -72,35 +72,35 @@ namespace CuidaTuAbuelo.Controllers
             return NoContent();
         }
 
-        // POST: api/Users
+        // POST: api/Stories
         [HttpPost]
-        public async Task<ActionResult<Users>> PostUsers(Users users)
+        public async Task<ActionResult<Stories>> PostStories(Stories stories)
         {
-            _context.Users.Add(users);
+            _context.Stories.Add(stories);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetUsers", new { id = users.userId }, users);
+            return CreatedAtAction("GetStories", new { id = stories.storyId }, stories);
         }
 
-        // DELETE: api/Users/5
+        // DELETE: api/Stories/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Users>> DeleteUsers(int id)
+        public async Task<ActionResult<Stories>> DeleteStories(int id)
         {
-            var users = await _context.Users.FindAsync(id);
-            if (users == null)
+            var stories = await _context.Stories.FindAsync(id);
+            if (stories == null)
             {
                 return NotFound();
             }
 
-            _context.Users.Remove(users);
+            _context.Stories.Remove(stories);
             await _context.SaveChangesAsync();
 
-            return users;
+            return stories;
         }
 
-        private bool UsersExists(int id)
+        private bool StoriesExists(int id)
         {
-            return _context.Users.Any(e => e.userId == id);
+            return _context.Stories.Any(e => e.storyId == id);
         }
     }
 }
