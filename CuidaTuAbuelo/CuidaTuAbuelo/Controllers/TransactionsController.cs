@@ -25,8 +25,29 @@ namespace CuidaTuAbuelo.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Transactions>>> GetTransactions()
         {
-            var transactionList = await _context.Transactions.ToListAsync();
-            return Json(new CommandResult<List<Transactions>>(true, "", transactionList));
+            var transactionList =
+                await _context.
+                Transactions.
+                Join(_context.Services, t => t.serviceId, sc => sc.serviceId, (t, s) => new { t, s }).
+                Join(_context.Users, t => t.t.userId, u => u.id, (t, u) => new { t, u }).
+                Join(_context.Products, t => t.t.t.productId, p => p.productId, (t, p) => new { t, p }).
+                Select(s => new
+                {
+                    productDescription = s.p.description,
+                    productName = s.p.name,
+                    nourseName = s.t.u.name,
+                    serviceDescription = s.t.t.s.description,
+                    s.t.t.t.initialDate,
+                    s.t.t.t.finalDate,
+                    s.t.t.t.notes,
+                    s.t.t.t.transactionScore,
+                    s.t.t.t.transactionId,
+                    transactionValue = string.Format("{0:N0}", s.t.t.t.transactionValue),
+                    s.t.t.t.createdDate,
+                    s.t.u.imageUrl
+                }).OrderByDescending(o => o.createdDate).ToListAsync();
+
+            return Json(new CommandResult<object>(true, "", transactionList));
         }
         // GET: api/Transactions/5
         [HttpGet("{id}")]
@@ -49,9 +70,12 @@ namespace CuidaTuAbuelo.Controllers
             {
                 return BadRequest();
             }
-            _context.Entry(transactions).State = EntityState.Modified;
             try
             {
+
+                var transaction = await _context.Transactions.Where(w => w.transactionId == transactions.transactionId).FirstOrDefaultAsync();
+                transaction.transactionScore = transactions.transactionScore;
+                _context.Transactions.Update(transaction);
                 await _context.SaveChangesAsync();
                 return Json(new CommandResult<Transactions>(true, "Transacción actualizada correctamente.", transactions));
             }
@@ -67,6 +91,7 @@ namespace CuidaTuAbuelo.Controllers
             try
             {
 
+                transactions.createdDate = DateTime.Now;
                 _context.Transactions.Add(transactions);
                 await _context.SaveChangesAsync();
                 return Json(new CommandResult<Transactions>(true, "Transacción creada correctamente.", transactions));

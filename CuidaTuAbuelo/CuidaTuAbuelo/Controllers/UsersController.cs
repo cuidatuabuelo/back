@@ -25,6 +25,7 @@ namespace CuidaTuAbuelo.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Users>>> GetUsers()
         {
+            Response.Headers.Add("X-Total-Count", "100000");
             return await _context.Users.ToListAsync();
         }
 
@@ -38,7 +39,7 @@ namespace CuidaTuAbuelo.Controllers
             {
                 return NotFound();
             }
-
+            
             return users;
         }
 
@@ -46,7 +47,7 @@ namespace CuidaTuAbuelo.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutUsers(int id, Users users)
         {
-            if (id != users.userId)
+            if (id != users.id)
             {
                 return BadRequest();
             }
@@ -79,7 +80,7 @@ namespace CuidaTuAbuelo.Controllers
             _context.Users.Add(users);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetUsers", new { id = users.userId }, users);
+            return CreatedAtAction("GetUsers", new { id = users.id }, users);
         }
 
         // DELETE: api/Users/5
@@ -100,7 +101,7 @@ namespace CuidaTuAbuelo.Controllers
 
         private bool UsersExists(int id)
         {
-            return _context.Users.Any(e => e.userId == id);
+            return _context.Users.Any(e => e.id == id);
         }
     }
 }
