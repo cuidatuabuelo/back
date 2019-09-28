@@ -4730,6 +4730,16 @@
         "runtime": {
           "bin/placeholder/CuidaTuAbuelo.DataAccess.dll": {}
         }
+      },
+      "CuidaTuAbuelo.Logic/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "compile": {
+          "bin/placeholder/CuidaTuAbuelo.Logic.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CuidaTuAbuelo.Logic.dll": {}
+        }
       }
     }
   },
@@ -12944,11 +12954,17 @@
       "type": "project",
       "path": "../CuidaTuAbuelo.DataAccess/CuidaTuAbuelo.DataAccess.csproj",
       "msbuildProject": "../CuidaTuAbuelo.DataAccess/CuidaTuAbuelo.DataAccess.csproj"
+    },
+    "CuidaTuAbuelo.Logic/1.0.0": {
+      "type": "project",
+      "path": "../CuidaTuAbuelo.Logic/CuidaTuAbuelo.Logic.csproj",
+      "msbuildProject": "../CuidaTuAbuelo.Logic/CuidaTuAbuelo.Logic.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
       "CuidaTuAbuelo.DataAccess >= 1.0.0",
+      "CuidaTuAbuelo.Logic >= 1.0.0",
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
       "Microsoft.NETCore.App >= 2.2.0",
@@ -12987,6 +13003,9 @@
           "projectReferences": {
             "C:\\Desarrollo\\Hackatrix\\back\\CuidaTuAbuelo\\CuidaTuAbuelo.DataAccess\\CuidaTuAbuelo.DataAccess.csproj": {
               "projectPath": "C:\\Desarrollo\\Hackatrix\\back\\CuidaTuAbuelo\\CuidaTuAbuelo.DataAccess\\CuidaTuAbuelo.DataAccess.csproj"
+            },
+            "C:\\Desarrollo\\Hackatrix\\back\\CuidaTuAbuelo\\CuidaTuAbuelo.Logic\\CuidaTuAbuelo.Logic.csproj": {
+              "projectPath": "C:\\Desarrollo\\Hackatrix\\back\\CuidaTuAbuelo\\CuidaTuAbuelo.Logic\\CuidaTuAbuelo.Logic.csproj"
             }
           }
         }

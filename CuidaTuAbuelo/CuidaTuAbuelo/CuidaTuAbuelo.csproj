@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CuidaTuAbuelo.DataAccess\CuidaTuAbuelo.DataAccess.csproj" />
+    <ProjectReference Include="..\CuidaTuAbuelo.Logic\CuidaTuAbuelo.Logic.csproj" />
   </ItemGroup>
 
 </Project>

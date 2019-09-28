@@ -15,3 +15,5 @@ C:\Desarrollo\Hackatrix\back\CuidaTuAbuelo\CuidaTuAbuelo\obj\Debug\netcoreapp2.2
 C:\Desarrollo\Hackatrix\back\CuidaTuAbuelo\CuidaTuAbuelo\bin\Debug\netcoreapp2.2\CuidaTuAbuelo.DataAccess.dll
 C:\Desarrollo\Hackatrix\back\CuidaTuAbuelo\CuidaTuAbuelo\bin\Debug\netcoreapp2.2\CuidaTuAbuelo.DataAccess.pdb
 C:\Desarrollo\Hackatrix\back\CuidaTuAbuelo\CuidaTuAbuelo\obj\Debug\netcoreapp2.2\CuidaTuAbuelo.csproj.CopyComplete
+C:\Desarrollo\Hackatrix\back\CuidaTuAbuelo\CuidaTuAbuelo\bin\Debug\netcoreapp2.2\CuidaTuAbuelo.Logic.dll
+C:\Desarrollo\Hackatrix\back\CuidaTuAbuelo\CuidaTuAbuelo\bin\Debug\netcoreapp2.2\CuidaTuAbuelo.Logic.pdb

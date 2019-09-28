@@ -25,6 +25,7 @@
       "CuidaTuAbuelo/1.0.0": {
         "dependencies": {
           "CuidaTuAbuelo.DataAccess": "1.0.0",
+          "CuidaTuAbuelo.Logic": "1.0.0",
           "Microsoft.AspNetCore.App": "2.2.0",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
           "Microsoft.NETCore.App": "2.2.0",
@@ -349,6 +350,14 @@
         },
         "compile": {
           "CuidaTuAbuelo.DataAccess.dll": {}
+        }
+      },
+      "CuidaTuAbuelo.Logic/1.0.0": {
+        "runtime": {
+          "CuidaTuAbuelo.Logic.dll": {}
+        },
+        "compile": {
+          "CuidaTuAbuelo.Logic.dll": {}
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -3680,6 +3689,11 @@
       "hashPath": "system.linq.parallel.4.3.0.nupkg.sha512"
     },
     "CuidaTuAbuelo.DataAccess/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CuidaTuAbuelo.Logic/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
