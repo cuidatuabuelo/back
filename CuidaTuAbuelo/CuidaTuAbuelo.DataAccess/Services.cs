@@ -4,12 +4,12 @@ using System.Text;
 
 namespace CuidaTuAbuelo.DataAccess
 {
-    public class Products : Base
+    public class Services : Base
     {
-        public int productId { get; set; }
-        public string name { get; set; }
+        public int serviceId { get; set; }
         public string description { get; set; }
         public double price { get; set; }
-        public string provider { get; set; }
+        public bool status { get; set; }
+
     }
 }
