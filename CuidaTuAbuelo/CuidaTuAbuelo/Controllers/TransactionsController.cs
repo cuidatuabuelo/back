@@ -7,12 +7,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using CuidaTuAbuelo.DataAccess;
 using CuidaTuAbuelo.Models;
+using CuidaTuAbuelo.Logic;
 
 namespace CuidaTuAbuelo.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class TransactionsController : ControllerBase
+    public class TransactionsController : Controller
     {
         private readonly CuidaTuAbueloContext _context;
 
@@ -20,14 +21,13 @@ namespace CuidaTuAbuelo.Controllers
         {
             _context = context;
         }
-
         // GET: api/Transactions
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Transactions>>> GetTransactions()
         {
-            return await _context.Transactions.ToListAsync();
+            var transactionList = await _context.Transactions.ToListAsync();
+            return Json(new CommandResult<List<Transactions>>(true, "", transactionList));
         }
-
         // GET: api/Transactions/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Transactions>> GetTransactions(int id)
@@ -39,9 +39,8 @@ namespace CuidaTuAbuelo.Controllers
                 return NotFound();
             }
 
-            return transactions;
+            return Json(new CommandResult<Transactions>(true, "", transactions));
         }
-
         // PUT: api/Transactions/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutTransactions(int id, Transactions transactions)
@@ -50,38 +49,33 @@ namespace CuidaTuAbuelo.Controllers
             {
                 return BadRequest();
             }
-
             _context.Entry(transactions).State = EntityState.Modified;
-
             try
             {
                 await _context.SaveChangesAsync();
+                return Json(new CommandResult<Transactions>(true, "Transacción actualizada correctamente.", transactions));
             }
-            catch (DbUpdateConcurrencyException)
+            catch (Exception ex)
             {
-                if (!TransactionsExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+                return Json(new CommandResult<Transactions>(false, "Error editando la trasacción. " + ex.Message, transactions));
             }
-
-            return NoContent();
         }
-
         // POST: api/Transactions
         [HttpPost]
         public async Task<ActionResult<Transactions>> PostTransactions(Transactions transactions)
         {
-            _context.Transactions.Add(transactions);
-            await _context.SaveChangesAsync();
+            try
+            {
 
-            return CreatedAtAction("GetTransactions", new { id = transactions.transactionId }, transactions);
+                _context.Transactions.Add(transactions);
+                await _context.SaveChangesAsync();
+                return Json(new CommandResult<Transactions>(true, "Transacción creada correctamente.", transactions));
+            }
+            catch (Exception ex)
+            {
+                return Json(new CommandResult<Transactions>(false, "Error al crear la transacción." + ex.Message, transactions));
+            }
         }
-
         // DELETE: api/Transactions/5
         [HttpDelete("{id}")]
         public async Task<ActionResult<Transactions>> DeleteTransactions(int id)
@@ -91,16 +85,16 @@ namespace CuidaTuAbuelo.Controllers
             {
                 return NotFound();
             }
-
-            _context.Transactions.Remove(transactions);
-            await _context.SaveChangesAsync();
-
-            return transactions;
-        }
-
-        private bool TransactionsExists(int id)
-        {
-            return _context.Transactions.Any(e => e.transactionId == id);
+            try
+            {
+                _context.Transactions.Remove(transactions);
+                await _context.SaveChangesAsync();
+                return Json(new CommandResult<Transactions>(true, "Transacción eliminada correctamente.", transactions));
+            }
+            catch (Exception ex)
+            {
+                return Json(new CommandResult<Transactions>(true, "Error eliminando la transacción.", transactions));
+            }
         }
     }
 }
